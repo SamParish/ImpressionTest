@@ -1,10 +1,10 @@
 <head>
-<script src="jquery-3.3.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="form.js"></script>
 </head>
 
 
-<form id="subscribe-form" >
+<form id="subscribe-form" method="post">
 <div class="user-input">    
     <input type="text" id="first_name" name="user_first_name" placeholder="First Name">
     <input type="text" id="last_name" name="user_last_name" placeholder="Last Name">

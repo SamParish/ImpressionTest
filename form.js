@@ -18,18 +18,20 @@ $('#subscribe-form').submit(function(event) {
   
   // Send data to PHP script via .ajax() of jQuery
   $.ajax({
-    type: 'POST',
+    type: 'post',
     dataType: 'json',
-    url: 'localhost/impressiontest/submitToMailChimp.php/',
-    data: userData,
+    url: 'submitToMailChimp.php',
+    data: 'userData',
     success: function (results) {
-      $('#first_name').hide();
+      console.log('succesful ajax');
+	  $('#first_name').hide();
       $('#last_name').hide();
       $('#email').hide();
       $('#result').text('Thanks for subscribing!');
       console.log(results);
     },
     error: function (results) {
+		console.log('unsuccesful ajax');
       $('#result').html('<p>Sorry we couldnt process your subscription.</p>');
       console.log(results);
     }

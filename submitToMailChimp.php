@@ -13,7 +13,6 @@ $result = $MailChimp->post("lists/$list_id/members", [
 			]);
 
 // Check if successful
-
 if ($MailChimp->success()) {
 	print_r($result);
 } else {
