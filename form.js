@@ -1,5 +1,5 @@
 // Subcribe user
-$('#subscribe-form').submit(function(event) {
+$('#subscribe-form-button').click(function(event) {
   event.preventDefault();
 
   // Get form data

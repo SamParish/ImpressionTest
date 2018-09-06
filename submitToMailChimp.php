@@ -1,4 +1,6 @@
 <?php
+require __DIR__ . '/vendor/autoload.php';
+
 use DrewM\MailChimp\MailChimp;
 
 // MailChimp config
@@ -9,9 +11,11 @@ $list_id = '3796175ac2';
 $result = $MailChimp->post("lists/$list_id/members", [
 				'merge_fields' => ['FNAME'=>$_POST['firstname'], 'LNAME'=>$_POST['lastname']],
 				'email_address' => $_POST['email'],
-				'status'        => 'subscribed',
+				'status'        => 'subscribed'
 			]);
-
+//getLastResponse();
+echo $result;
+			
 // Check if successful
 if ($MailChimp->success()) {
 	print_r($result);
