@@ -14,11 +14,13 @@ $('#subscribe-form').submit(function(event) {
     'email': userEMAIL,
   };
 
+  console.log ('About to send Ajax request')
+  
   // Send data to PHP script via .ajax() of jQuery
   $.ajax({
     type: 'POST',
     dataType: 'json',
-    url: 'submitToMailChimp.php',
+    url: 'localhost/impressiontest/submitToMailChimp.php/',
     data: userData,
     success: function (results) {
       $('#first_name').hide();

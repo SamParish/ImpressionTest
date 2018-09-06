@@ -1,5 +1,5 @@
 <?php
-use \DrewM\MailChimp\MailChimp;
+use DrewM\MailChimp\MailChimp;
 
 // MailChimp config
 $MailChimp = new MailChimp('29187bb1c2791ec54bbde069d92e3c37-us19');
@@ -13,6 +13,7 @@ $result = $MailChimp->post("lists/$list_id/members", [
 			]);
 
 // Check if successful
+
 if ($MailChimp->success()) {
 	print_r($result);
 } else {
