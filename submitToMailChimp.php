@@ -16,9 +16,9 @@ $result = $MailChimp->post("lists/$list_id/members", [
 			
 // Check if successful
 if ($MailChimp->success()) {
-	print_r($result);
+	echo ('Congratulations! You are now subscribed.')
 } else {
-	echo $MailChimp->getLastError();
-	print_r($MailChimp->getLastResponse());
+	echo ("Sorry something went wrong, we weren't able to subscribe you")
+	Console.log($MailChimp->getLastError());
 }
 ?>
