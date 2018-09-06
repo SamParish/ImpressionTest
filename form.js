@@ -19,7 +19,7 @@ $('#subscribe-form').submit(function(event) {
     type: 'POST',
     dataType: 'json',
     url: 'submitToMailChimp.php',
-    data: pfbSignupData,
+    data: userData,
     success: function (results) {
       $('#first_name').hide();
       $('#last_name').hide();
