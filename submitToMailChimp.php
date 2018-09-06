@@ -13,13 +13,12 @@ $result = $MailChimp->post("lists/$list_id/members", [
 				'email_address' => $_POST['email'],
 				'status'        => 'subscribed'
 			]);
-//getLastResponse();
-echo $result;
 			
 // Check if successful
 if ($MailChimp->success()) {
 	print_r($result);
 } else {
 	echo $MailChimp->getLastError();
+	print_r($MailChimp->getLastResponse());
 }
 ?>
